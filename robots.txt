@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://EliteAiAgent.github.io/tall-heavy-e-bike-guide/sitemap.xml

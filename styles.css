@@ -1,0 +1,355 @@
+/* Tall & Heavy E-Bike Guide — faithful recreation of the approved original design.
+   Warm paper editorial theme: cream ground, rust accent, deep-green tables/disclosure. */
+
+:root {
+  --bg: #F7F3EA;
+  --nav-bg: #FBF8F1;
+  --card-bg: #FFFFFF;
+  --text: #1F1B16;
+  --muted: #6B645A;
+  --heading: #14110D;
+  --rust: #B4431F;
+  --teal: #0E6B5C;
+  --teal-hover: #0A5246;
+  --green-dark: #1C4A38;
+  --border: #E3DCCC;
+  --card-border: #E2DACA;
+  --table-stripe: #EEE7D6;
+  --table-border: #DDD4C0;
+  --max-width: 1120px;
+  --article-width: 740px;
+  --radius: 8px;
+  --serif: "Playfair Display", Georgia, "Times New Roman", serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--bg);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.container-narrow { max-width: var(--article-width); }
+
+/* ---------- Header / nav ---------- */
+.site-header {
+  background: var(--nav-bg);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+
+.site-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--heading);
+  text-decoration: none;
+}
+
+.site-nav { display: flex; flex-wrap: wrap; gap: 4px 22px; }
+
+.site-nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 4px 0;
+}
+
+.site-nav a:hover { color: var(--rust); }
+.site-nav a[aria-current="page"] { color: var(--rust); }
+
+/* ---------- Hero (landing) ---------- */
+.hero { padding: 72px 0 40px; }
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin: 0 0 18px;
+}
+
+.eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 28px;
+  height: 3px;
+  background: var(--rust);
+}
+
+.hero h1 {
+  font-family: var(--serif);
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  color: var(--heading);
+  margin: 0 0 20px;
+  max-width: 12em;
+}
+
+.hero .lede {
+  font-size: 19px;
+  color: var(--muted);
+  max-width: 640px;
+  margin: 0;
+}
+
+.hero-rule {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 48px 0 0;
+}
+
+/* ---------- Guide cards ---------- */
+.guides-section { padding: 56px 0 8px; }
+
+.guides-section h2, .research-section h2 {
+  font-family: var(--serif);
+  font-weight: 800;
+  font-size: 40px;
+  color: var(--heading);
+  margin: 0 0 28px;
+  letter-spacing: -0.01em;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  padding: 28px;
+  text-decoration: none;
+  color: var(--text);
+  box-shadow: 0 2px 10px rgba(31, 27, 22, 0.05);
+}
+
+.card:hover { border-color: var(--rust); }
+
+.card-num {
+  font-family: var(--serif);
+  font-size: 20px;
+  color: var(--rust);
+  margin-bottom: 18px;
+}
+
+.card h3 {
+  font-family: var(--serif);
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--heading);
+  margin: 0 0 12px;
+}
+
+.card p {
+  font-size: 15.5px;
+  color: var(--muted);
+  margin: 0 0 20px;
+  flex-grow: 1;
+}
+
+.card-link {
+  color: var(--teal);
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.card:hover .card-link { color: var(--teal-hover); }
+
+/* ---------- Research section ---------- */
+.research-section { padding: 64px 0 8px; }
+
+.research-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.research-cols h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--heading);
+  margin: 0 0 10px;
+}
+
+.research-cols p { color: var(--muted); margin: 0; font-size: 16.5px; }
+
+/* ---------- Disclosure panel ---------- */
+.disclosure {
+  background: var(--green-dark);
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 30px 32px;
+  margin: 8px 0 64px;
+}
+
+.disclosure h3 {
+  font-size: 17px;
+  font-weight: 700;
+  margin: 0 0 10px;
+  color: #ffffff;
+}
+
+.disclosure p { margin: 0; font-size: 16px; color: #f2efe6; }
+
+/* ---------- Articles ---------- */
+.article { padding: 40px 0 8px; }
+
+.article h1 {
+  font-family: var(--serif);
+  font-weight: 900;
+  font-size: 42px;
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+  color: var(--heading);
+  margin: 0 0 10px;
+}
+
+.article-meta { color: var(--muted); font-size: 15px; margin-bottom: 28px; }
+
+.article h2 {
+  font-family: var(--serif);
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--heading);
+  margin: 44px 0 14px;
+  letter-spacing: -0.005em;
+}
+
+.article h3 {
+  font-family: var(--serif);
+  font-size: 21px;
+  font-weight: 700;
+  color: var(--heading);
+  margin: 30px 0 10px;
+}
+
+.article p, .article li { margin: 0 0 14px; }
+.article ul { padding-left: 24px; }
+.article a { color: var(--teal); font-weight: 600; }
+.article a:hover { color: var(--teal-hover); }
+.footnote { font-size: 14px; color: var(--muted); }
+
+/* Tables */
+.table-wrap {
+  overflow-x: auto;
+  margin: 18px 0;
+  border: 1px solid var(--table-border);
+  border-radius: var(--radius);
+  background: var(--card-bg);
+}
+
+table { border-collapse: collapse; width: 100%; font-size: 15px; min-width: 720px; }
+
+th, td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--table-border);
+  vertical-align: top;
+}
+
+thead th {
+  background: var(--green-dark);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 13.5px;
+  white-space: nowrap;
+}
+
+tbody tr:nth-child(even) { background: var(--table-stripe); }
+tbody tr:last-child td { border-bottom: none; }
+
+/* Related-guides nav on article pages */
+.related-nav {
+  margin: 40px 0 8px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 20px;
+}
+
+.related-nav .back-link {
+  color: var(--teal);
+  font-weight: 700;
+  text-decoration: none;
+  margin-right: auto;
+}
+
+.related-nav .related-label { color: var(--muted); font-size: 14px; font-weight: 600; }
+
+.related-nav a.related-link {
+  color: var(--teal);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.related-nav a:hover { color: var(--teal-hover); }
+
+/* ---------- Footer ---------- */
+.site-footer {
+  border-top: 1px solid var(--border);
+  margin-top: 56px;
+  padding: 26px 0 34px;
+  font-size: 13.5px;
+  color: var(--muted);
+}
+
+.site-footer p { margin: 0; max-width: 900px; }
+
+/* ---------- Mobile ---------- */
+@media (max-width: 900px) {
+  .cards { grid-template-columns: 1fr; }
+  .research-cols { grid-template-columns: 1fr; gap: 24px; }
+}
+
+@media (max-width: 640px) {
+  body { font-size: 16px; }
+  .hero { padding: 48px 0 28px; }
+  .hero h1 { font-size: 42px; }
+  .hero .lede { font-size: 17px; }
+  .guides-section h2, .research-section h2 { font-size: 30px; }
+  .article h1 { font-size: 32px; }
+  .article h2 { font-size: 24px; }
+  .header-inner { gap: 6px 16px; }
+  .site-nav { gap: 4px 14px; }
+  .disclosure { padding: 24px; }
+}
