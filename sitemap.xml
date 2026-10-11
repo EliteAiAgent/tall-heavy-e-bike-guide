@@ -1,28 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Replace YOUR-USERNAME with your GitHub username after creating the repository. -->
   <url>
     <loc>https://EliteAiAgent.github.io/tall-heavy-e-bike-guide/</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://EliteAiAgent.github.io/tall-heavy-e-bike-guide/best-tall-heavy-ebikes.html</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://EliteAiAgent.github.io/tall-heavy-e-bike-guide/best-ebikes-300-400-lb.html</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://EliteAiAgent.github.io/tall-heavy-e-bike-guide/tall-heavy-ebike-buyers-guide.html</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://EliteAiAgent.github.io/tall-heavy-e-bike-guide/heavy-duty-ebike-deals.html</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://EliteAiAgent.github.io/tall-heavy-e-bike-guide/best-step-through-ebikes.html</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://EliteAiAgent.github.io/tall-heavy-e-bike-guide/contact.html</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://EliteAiAgent.github.io/tall-heavy-e-bike-guide/affiliate-disclosure.html</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>
